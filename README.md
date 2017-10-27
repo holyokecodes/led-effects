@@ -4,7 +4,7 @@ A effects library for LED strips that doesn't block the loop
 Based on https://learn.adafruit.com/multi-tasking-the-arduino-part-3
 
 ## Use
-Download the [led-effects.zip](https://github.com/holyokecodes/led-effects/blob/master/led-effects.zip) file.
+Download the [led-effects.zip](https://github.com/holyokecodes/led-effects/raw/master/led-effects.zip) file.
 
 In the Arduino IDE, choose "Include Library" from the "Sketch" menu. Then select "Add ZIP Library" and choose the downloaded zip file.
 
