@@ -2,7 +2,7 @@
 
 
 // Constructor - calls base-class constructor to initialize strip
-NeoPatterns::NeoPatterns(uint16_t pixels, uint8_t pin, uint8_t type = NEO_GRB + NEO_KHZ800, void (*callback)() = NULL)
+NeoPatterns::NeoPatterns(uint16_t pixels, uint8_t pin, void (*callback)() = NULL, uint8_t type = NEO_GRB + NEO_KHZ800)
 :Adafruit_NeoPixel(pixels, pin, type)
 {
     if (callback) { OnComplete = callback; }

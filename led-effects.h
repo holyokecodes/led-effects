@@ -27,7 +27,7 @@ public:
     
     void (*OnComplete)();  // Callback on completion of pattern
 
-    NeoPatterns(uint16_t pixels, uint8_t pin, uint8_t type = NEO_GRB + NEO_KHZ800, void (*callback)() = NULL);
+    NeoPatterns(uint16_t pixels, uint8_t pin, void (*callback)() = NULL, uint8_t type = NEO_GRB + NEO_KHZ800);
 
     void Update();
     void Increment();
