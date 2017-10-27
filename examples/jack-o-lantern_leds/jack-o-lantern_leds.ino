@@ -7,7 +7,9 @@
 #define trigPin 9 // Trigger Pin
 #define maxRange 50 // Maximum range needed
 
-NeoPatterns leds(NUMPIXELS, ledPin);
+void effectComplete();
+
+NeoPatterns leds(NUMPIXELS, ledPin, effectComplete);
 
 // Define some colors with RGB values
 uint32_t red = leds.Color(255, 0, 0);
@@ -64,3 +66,8 @@ void loop()
  }
  leds.Update(); 
 }
+
+void effectComplete() {
+  leds.Reverse();
+}
+
