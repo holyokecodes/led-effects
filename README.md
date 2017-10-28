@@ -4,6 +4,8 @@ A effects library for LED strips (neopixels).
 Based on https://learn.adafruit.com/multi-tasking-the-arduino-part-3
 
 ## Use
+Install the Adafruit Neopixel library. In the Arduino IDE, choose "Include Library" from the "Sketch" menu. Then select "Manage Libraries" and filter by "Adafruit NeoPixel". Install the "Adafruit NeoPixel" by Adafruit library (currently version 1.1.3).
+
 Download the [led-effects.zip](https://github.com/holyokecodes/led-effects/raw/master/led-effects.zip) file.
 
 In the Arduino IDE, choose "Include Library" from the "Sketch" menu. Then select "Add ZIP Library" and choose the downloaded zip file.
