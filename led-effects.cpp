@@ -2,7 +2,7 @@
 
 
 // Constructor - calls base-class constructor to initialize strip
-NeoPatterns::NeoPatterns(uint16_t pixels, uint8_t pin, void (*callback)() = NULL, uint8_t type = NEO_GRB + NEO_KHZ800)
+NeoPatterns::NeoPatterns(uint16_t pixels, uint8_t pin, void (*callback)(), uint8_t type)
 :Adafruit_NeoPixel(pixels, pin, type)
 {
     if (callback) { OnComplete = callback; }
@@ -81,7 +81,7 @@ void NeoPatterns::Reverse()
 }
 
 // Initialize for a RainbowCycle
-void NeoPatterns::RainbowCycle(uint8_t interval, direction dir = FORWARD)
+void NeoPatterns::RainbowCycle(uint8_t interval, direction dir)
 {
     ActivePattern = RAINBOW_CYCLE;
     Interval = interval;
@@ -102,7 +102,7 @@ void NeoPatterns::RainbowCycleUpdate()
 }
 
 // Initialize for a Theater Chase
-void NeoPatterns::TheaterChase(uint32_t color1, uint32_t color2, uint8_t interval, direction dir = FORWARD)
+void NeoPatterns::TheaterChase(uint32_t color1, uint32_t color2, uint8_t interval, direction dir)
 {
     ActivePattern = THEATER_CHASE;
     Interval = interval;
@@ -132,7 +132,7 @@ void NeoPatterns::TheaterChaseUpdate()
 }
 
 // Initialize for a ColorWipe
-void NeoPatterns::ColorWipe(uint32_t color, uint8_t interval, direction dir = FORWARD)
+void NeoPatterns::ColorWipe(uint32_t color, uint8_t interval, direction dir)
 {
     ActivePattern = COLOR_WIPE;
     Interval = interval;
@@ -183,7 +183,7 @@ void NeoPatterns::ScannerUpdate()
 }
 
 // Initialize for a Fade
-void NeoPatterns::Fade(uint32_t color1, uint32_t color2, uint16_t steps, uint8_t interval, direction dir = FORWARD)
+void NeoPatterns::Fade(uint32_t color1, uint32_t color2, uint16_t steps, uint8_t interval, direction dir)
 {
     ActivePattern = FADE;
     Interval = interval;
